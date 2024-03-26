@@ -1,0 +1,162 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.app-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.directory-path {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+    z-index: 1000;
+}
+
+.buttons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.layer.active {
+    pointer-events: auto;
+}
+
+.layer-manager {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.layer-thumbnail-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.layer-thumbnail {
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.layer-thumbnail.active {
+    border-color: #ff0000;
+}
+
+.layer-toggle {
+    cursor: pointer;
+}
+
+.nested-drawing-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: #fff;
+    z-index: 2000;
+}
+
+.nested-drawing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+}
+
+.nested-drawing-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close-nested-drawing {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.nested-drawing-name {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.nested-layer-manager {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    z-index: 2001;
+}
+
+.nested-layer-thumbnail-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nested-layer-thumbnail {
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.nested-layer-thumbnail.active {
+    border-color: #ff0000;
+}
+
+.nested-layer-toggle {
+    cursor: pointer;
+}
