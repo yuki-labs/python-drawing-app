@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drawing App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="directory-path"></div>
+        <div class="buttons">
+            <button id="new-layer-btn">New Layer</button>
+            <button id="new-nested-drawing-btn">New Nested Drawing</button>
+            <button id="save-btn">Save</button>
+            <input type="file" id="load-file" accept="image/*" style="display: none;">
+            <button id="load-btn">Load</button>
+        </div>
+        <div class="layer-manager"></div>
+        <div class="drawing-container"></div>
+    </div>
+</body>
+</html>
